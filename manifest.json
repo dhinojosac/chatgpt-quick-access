@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Quick Access",
+  "version": "1.0.0",
+  "description": "Quickly open ChatGPT temporary chat with Ctrl+Shift+C",
+  "permissions": [
+    "tabs",
+    "commands"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+          "open-chatgpt": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+K",
+          "mac": "Command+Shift+K"
+        },
+        "description": "Open ChatGPT temporary chat"
+      },
+      "open-chatgpt-normal": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+L",
+          "mac": "Command+Shift+L"
+        },
+        "description": "Open ChatGPT normal"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ChatGPT Quick Access"
+  }
+} 

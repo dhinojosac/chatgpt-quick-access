@@ -1,0 +1,38 @@
+{
+  "name": "chatgpt-quick-access",
+  "version": "1.0.0",
+  "description": "Chrome/Edge extension to quickly open ChatGPT with keyboard shortcuts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run copy-manifest && npm run update-manifest",
+    "copy-manifest": "copyfiles -u 0 manifest.json dist/",
+    "update-manifest": "node update-manifest.js",
+    "preview": "vite preview",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "chrome-extension",
+    "edge-extension",
+    "chatgpt",
+    "keyboard-shortcut",
+    "productivity",
+    "vite"
+  ],
+  "author": "Diego Hinojosa Cordova (dhinojosac)",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhinojosac/chatgpt-quick-access.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhinojosac/chatgpt-quick-access/issues"
+  },
+  "homepage": "https://github.com/dhinojosac/chatgpt-quick-access#readme"
+} 
