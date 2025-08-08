@@ -52,6 +52,21 @@ A Chrome/Edge browser extension that allows you to quickly open ChatGPT with key
 - `npm run clean` - Clean the dist folder
 - `npm run rebuild` - Clean and rebuild the extension
 
+### Version Management
+
+- `npm run version:patch` - Increment patch version (1.0.0 → 1.0.1)
+- `npm run version:minor` - Increment minor version (1.0.0 → 1.1.0)
+- `npm run version:major` - Increment major version (1.0.0 → 2.0.0)
+- `npm run version:preview` - Create beta version (1.0.0 → 1.0.1-beta.0)
+- `npm run release` - Build and generate release files with changelog
+- `npm run release:full` - Build, generate release files, and create ZIP
+
+### Distribution
+
+- `npm run zip` - Create versioned ZIP file for distribution
+- `npm run zip:dev` - Create development ZIP file (no version)
+- `npm run zip:clean` - Clean releases folder
+
 ### Development Workflow
 
 1. **Start development:**
@@ -67,6 +82,40 @@ A Chrome/Edge browser extension that allows you to quickly open ChatGPT with key
    ```
 
 4. **Load the extension** from the `dist` folder
+
+## Distribution
+
+### Creating Release ZIPs
+
+For distribution and sharing, you can create ZIP files:
+
+```bash
+# Create versioned ZIP (recommended for releases)
+npm run zip
+
+# Create development ZIP (for testing)
+npm run zip:dev
+
+# Full release with ZIP
+npm run release:full
+```
+
+### ZIP File Structure
+
+The generated ZIP files contain:
+- `manifest.json` - Extension manifest
+- `popup.html` - Extension popup
+- `assets/` - Compiled JavaScript and CSS
+- `icons/` - Extension icons
+- `CHANGELOG.md` - Release changelog
+- `build-info.json` - Build metadata
+
+### Release Files Location
+
+All release files are stored in the `releases/` folder:
+- `chatgpt-quick-access-v1.0.1.zip` - Versioned release
+- `chatgpt-quick-access-dev.zip` - Development version
+- `release-info-v1.0.1.json` - Release metadata
 
 ## Project Structure
 
