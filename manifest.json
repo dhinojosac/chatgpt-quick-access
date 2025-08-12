@@ -1,10 +1,9 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT Quick Access",
-  "version": "1.0.1",
-  "description": "Quickly open ChatGPT temporary chat with Ctrl+Shift+C",
+  "version": "1.0.2",
+  "description": "Quickly access ChatGPT with keyboard shortcuts. Open temporary chat or regular ChatGPT in new tabs.",
   "permissions": [
-    "tabs",
     "commands"
   ],
   "icons": {
